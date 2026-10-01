@@ -1,1 +1,1 @@
-This is a Car Simulation project where the user will be able to choose various features about a car (e.g. engine, body, tyres) and the program will work out the car's acceleration (0-60) and other stats, e.g. 1/4 mile time and speed trap
+This is a Car Simulation project where the user will be able to choose various features about a car (e.g. engine, body, tyres) and the program will work out the car's acceleration (0-60) and other stats, e.g. 1/4 mile time and speed trap.
