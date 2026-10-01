@@ -30,5 +30,19 @@
         </div>
     </div>
 </body>
-<script></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const buttons = document.querySelectorAll(".button-div button");
+        buttons.forEach(button => {
+            button.addEventListener("click", function() {
+                const img = this.querySelector("img");
+                if (img.alt === "Options") {
+                    window.location.href = "options.html";
+                } else if (img.alt === "Go") {
+                    window.location.href = "go.html";
+                }
+            });
+        });
+    });
+</script>
 </html>
