@@ -18,13 +18,15 @@
                 <p>Have fun and be creative!</p>
             </div>
 
+            <div class="text-container" id="currently-selected"></div>
+
             <div class="button-container">
                 <div class="button-div">
-                    <button><img src="images/cog.png" alt="Options"></button>
+                    <button title="Options"><img src="images/cog.png" alt="Options"></button>
                 </div>
                 
                 <div class="button-div">
-                    <button><img src="images/rocket.png" alt="Go"></button>
+                    <button title="Go"><img src="images/rocket.png" alt="Go"></button>
                 </div>
             </div>
         </div>
@@ -43,6 +45,18 @@
                 }
             });
         });
+
+        // Load the selected options from localStorage
+        const choice = JSON.parse(localStorage.getItem("choice"));
+        if (choice) {
+            const currentlySelectedDiv = document.querySelector("#currently-selected");
+            currentlySelectedDiv.innerHTML = `<p>Currently Selected Options:</p>
+                <ul>
+                    <li>Engine: ${choice.engine}</li>
+                    <li>Body: ${choice.body}</li>
+                    <li>Tyres: ${choice.tyres}</li>
+                </ul>`;
+        }
     });
 </script>
 </html>
